@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    tools:context=".PaymentInformation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/paperfly_logo"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Payment Information"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@android:color/white"
+            android:background="@color/ETbox"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/payment_method"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="6dp"
+                android:textSize="20sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/bkashRB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="বিকাশ"/>
+                <RadioButton
+                    android:id="@+id/rocketRB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="রকেট"/>
+                <RadioButton
+                    android:id="@+id/nagadRB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="নগদ"/>
+                <RadioButton
+                    android:id="@+id/bankRB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ব্যাংক ট্রান্সফার"/>
+                <RadioButton
+                    android:id="@+id/chequeRB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="চেক"/>
+
+
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/accountNameTIL"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="@string/account_name"
+                app:boxStrokeColor="@color/ETlabel"
+                app:helperTextEnabled="true"
+                android:layout_margin="10dp"
+                app:hintTextColor="@color/ETbox"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/ETlabel"
+                >
+                <!--app:helperText="@string/helper_email"-->
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/accountNameET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/accountNoTIL"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="@string/account_no"
+                app:boxStrokeColor="@color/ETlabel"
+                app:helperTextEnabled="true"
+                android:layout_margin="10dp"
+                app:hintTextColor="@color/ETbox"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/ETlabel"
+                >
+                <!--app:helperText="@string/helper_email"-->
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/accountNoET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/bankNameTIL"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="@string/bank_name"
+                app:boxStrokeColor="@color/ETlabel"
+                app:helperTextEnabled="true"
+                android:layout_margin="10dp"
+                app:hintTextColor="@color/ETbox"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/ETlabel"
+                >
+                <!--app:helperText="@string/helper_email"-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/bankNameET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/branchTIL"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="@string/branch"
+                app:boxStrokeColor="@color/ETlabel"
+                app:helperTextEnabled="true"
+                android:layout_margin="10dp"
+                app:hintTextColor="@color/ETbox"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/ETlabel"
+                >
+                <!--app:helperText="@string/helper_email"-->
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/branchET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/routingNoTIL"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="@string/routing_no"
+                app:boxStrokeColor="@color/ETlabel"
+                app:helperTextEnabled="true"
+                android:layout_margin="10dp"
+                app:hintTextColor="@color/ETbox"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/ETlabel"
+                >
+                <!--app:helperText="@string/helper_email"-->
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/routingNoET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/submitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit Changes"
+                android:background="@drawable/button"
+                android:layout_margin="10dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

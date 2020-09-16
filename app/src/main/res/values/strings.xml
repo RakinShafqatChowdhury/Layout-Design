@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">LayoutDesign</string>
+    <string name="address">Address/ঠিকানা</string>
+    <string name="business_name">Business Name/মার্চেন্ট নাম</string>
+    <string name="product_nature">Product Nature/পন্যের ধরন</string>
+    <string name="thana">Thana/থানা</string>
+    <string name="website">Website/ওয়েবসাইট</string>
+    <string name="facebook_page">Facebook Page/ফেসবুক পেজ</string>
+    <string name="company_phone">Company Phone/কোম্পানি ফোন</string>
+    <string name="account_name">Account Name/একাউন্টের নাম</string>
+    <string name="account_no">Account Number/একাউন্ট নম্বর</string>
+    <string name="bank_name">Bank Name/ব্যাংকের নাম</string>
+    <string name="branch">Branch/শাখা</string>
+    <string name="routing_no">Routing Number/রাউটিং নম্বর</string>
+    <string name="payment_method">Payment Method/পেমেন্ট পদ্ধতি:</string>
+</resources>
